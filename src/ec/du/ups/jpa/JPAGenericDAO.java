@@ -4,8 +4,10 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import ec.edu.ups.dao.GenericDAO;
+
 import ec.edu.ups.entidades.Libro;
 
 public class JPAGenericDAO <T, ID> implements GenericDAO<T, ID> {
@@ -90,8 +92,12 @@ public class JPAGenericDAO <T, ID> implements GenericDAO<T, ID> {
 
 	@Override
 	public List<Libro> findByNombreAutor(String autor) {
-		// TODO Auto-generated method stub
-		return null;
+		Query nativeQuery = em.createNativeQuery(
+				"SELECT * FROM Libro, telefono WHERE telefono.USUARIO_CEDULA = usuario.CEDULA and usuario.CORREO = ?", Libro.class);
+		nativeQuery.setParameter(1, autor);
+		System.out.println("Listando: " + (List<Libro>) nativeQuery.getResultList());
+		
+		return (List<Libro>) nativeQuery.getResultList();
 	}
 
 	@Override
