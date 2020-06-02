@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:set var="lista" scope="request" value="${libro}" />
+<c:set var="lista" scope="request" value="${libros}" />
 	<h1>Lista de Libros</h1>
 
 	<table>

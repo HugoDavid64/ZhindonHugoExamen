@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import ec.edu.ups.dao.DAOFactory;
 import ec.edu.ups.dao.LibroDAO;
 import ec.edu.ups.entidades.Libro;
-import src.ec.edu.ups.controlador.String;
+
 
 /**
  * Servlet implementation class ListarLibros
