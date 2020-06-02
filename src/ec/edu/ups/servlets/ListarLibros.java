@@ -37,23 +37,29 @@ public class ListarLibros extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	
+		
+	
+		
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = null;
 		try {
+		
 			listaLibros = libroDao.find();
-			request.setAttribute("Libs", listaLibros);
+			System.out.println("lista"+ listaLibros.size());
+			request.setAttribute("libros", listaLibros);
 			url = "/Public/AgregarCapitulo.jsp";
 		}catch(Exception e){
-			
+			System.out.println("No vale");
 		}
-		
+		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+	
 
 }
