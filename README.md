@@ -5,6 +5,8 @@ ZhindonHugoExamen
 
 ![](media/051d7f7a27a8859be3e7d11bc118b0cd.png)
 
+![](media/50e13847b41e03dba528327db57c77bb.png)
+
 1.  Ingreso de un libro
 
 ![](media/1185292be92b8ff998eeeffce4e8c340.png)
